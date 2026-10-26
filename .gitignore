@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Node
+node_modules/
+dist/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Generated / private data
+*.log
+*.ics
+repu-briefs/
+repu-inbox/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

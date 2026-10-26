@@ -1,0 +1,35 @@
+{
+  "mode": "resolver",
+  "n_actionable": 23,
+  "date_accuracy": {
+    "value": 1.0,
+    "k": 23,
+    "n": 23,
+    "ci95": [
+      0.8569,
+      1
+    ]
+  },
+  "time_accuracy": {
+    "value": 1.0,
+    "k": 23,
+    "n": 23,
+    "ci95": [
+      0.8569,
+      1
+    ]
+  },
+  "ambiguity_flag_accuracy": {
+    "value": 1.0,
+    "k": 23,
+    "n": 23,
+    "ci95": [
+      0.8569,
+      1
+    ]
+  },
+  "split": "dev",
+  "dataset_sha256": "86044d2b1a9dc5db170efc495721e49440d056cfe0c1bd1085d8ef3612e87ca7",
+  "dataset_size": 40,
+  "run_at": "2026-10-25T21:13:56"
+}

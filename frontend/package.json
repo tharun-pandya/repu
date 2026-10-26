@@ -1,0 +1,9 @@
+{
+  "name": "repu-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Dependency-free UI (index.html). Dev dependency is jsdom for the smoke test only.",
+  "scripts": { "test": "node --test tests/*.test.mjs" },
+  "devDependencies": { "jsdom": "^26.0.0" }
+}

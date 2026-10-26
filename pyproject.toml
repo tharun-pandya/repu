@@ -1,0 +1,40 @@
+[project]
+name = "repu"
+version = "0.1.0"
+description = "Local-first Telugu/Tenglish class-chat task extractor (Ollama + deterministic validation)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+keywords = ["whatsapp", "telugu", "ollama", "local-first", "calendar", "nlp"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Framework :: FastAPI",
+]
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.30,<1",
+  "pydantic>=2.7,<3",
+  "python-multipart>=0.0.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "httpx>=0.27", "ruff>=0.6"]
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests"]
+markers = ["local_model: needs a real local Ollama + model (opt-in: REPU_LOCAL_MODEL_TEST=1)"]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 170
+target-version = "py311"
+extend-exclude = [".venv", "frontend/node_modules"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "UP"]
+ignore = ["E701", "E702", "E741", "E731", "B904", "UP037"]
+
+[tool.ruff.lint.per-file-ignores]
+"backend/app/errors.py" = ["E501"]
+"evaluation/generate_dataset.py" = ["E501"]

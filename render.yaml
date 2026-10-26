@@ -1,0 +1,10 @@
+# Render blueprint: hosted demo only. DEMO_MODE blocks file upload, private text and model inference.
+services:
+  - type: web
+    name: repu-demo
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: DEMO_MODE
+        value: "true"
